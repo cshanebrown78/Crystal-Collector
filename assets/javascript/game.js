@@ -44,9 +44,14 @@ function gameStart() {
         
     } 
         crystalOne = crystalNumbers[0];
+        
         crystalTwo = crystalNumbers[1];
         crystalThree = crystalNumbers[2];
         crystalFour = crystalNumbers[3];
+        $("#crystalOne").val(crystalOne);
+        $("#crystalTwo").val(crystalTwo);
+        $("#crystalThree").val(crystalThree);
+        $("#crystalFour").val(crystalFour);
         console.log(crystalOne);
         console.log(crystalTwo);
         console.log(crystalThree);
@@ -57,10 +62,30 @@ function gameStart() {
 
 // game play
 
-$("#crystalOne").on("click", function(){
-    result += crystalOne;
-    console.log (result);
-});
+// $("#crystalOne").on("click", function(){
+//     result += crystalOne;
+//     console.log (result);
+// });
+
+// $("#crystalTwo").on("click", function(){
+//     result += crystalTwo;
+//     console.log (result);
+// });
+
+// $("#crystalThree").on("click", function(){
+//     result += crystalThree;
+//     console.log (result);
+// });
+
+// $("#crystalFour").on("click", function(){
+//     result += crystalFour;
+//     console.log (result);
+// });
+
+$(".crystal").on("click", function(){
+    result += parseInt($(this).val());
+    $(".total-score").text(result);
+})
 
 
 // game reset
