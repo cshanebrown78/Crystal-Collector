@@ -2,15 +2,20 @@
 
 $(document).ready(function(){
 
-
+    // crystal button value
     var crystalOne = 0;
     var crystalTwo = 0;
     var crystalThree = 0;
     var crystalFour = 0;
+    // random number to match
     var randomNumber = 0;
+    // stores random crystal numbers
     var crystalNumbers = [];
+    // array to get the random crystal numbers
     var crystalNumberArray = [1,2,3,4,5,6,7,8,9,10,11,12]
+    // sum of buttons pushed stored here
     var result = 0;
+    // win loss counter variable
     var winCounter = 0;
     var lossCounter = 0;
     
@@ -43,15 +48,19 @@ function gameStart() {
         // console.log(crystalNumbers);
         
     } 
+        // assigns values to crystal buttons
         crystalOne = crystalNumbers[0];
         crystalTwo = crystalNumbers[1];
         crystalThree = crystalNumbers[2];
         crystalFour = crystalNumbers[3];
         $(".random-number").text(randomNumber);
+        $(".total-score").text(result);
         $("#crystalOne").val(crystalOne);
         $("#crystalTwo").val(crystalTwo);
         $("#crystalThree").val(crystalThree);
         $("#crystalFour").val(crystalFour);
+        $(".wins").text(winCounter);
+        $(".losses").text(lossCounter);
         // console.log(crystalOne);
         // console.log(crystalTwo);
         // console.log(crystalThree);
@@ -61,7 +70,6 @@ function gameStart() {
 
 
 // game play
-
 
 
 $(".crystal").on("click", function(){
@@ -99,9 +107,9 @@ function winLose() {
         gameReset();
     }
 
-    if (result > randomNumber) {
+    else if (result > randomNumber) {
         lossCounter ++;
-        $(".losses").text(winCounter);
+        $(".losses").text(lossCounter);
         gameReset();
     }
 }
