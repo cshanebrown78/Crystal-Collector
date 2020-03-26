@@ -16,4 +16,4 @@ For this project I also used HTML, CSS reset, Bootstrap, and some of my own CSS.
 
 ## Play the game
 
-https://cshanebrown78.github.io/unit-4-game/
+https://cshanebrown78.github.io/Crystal-Collector/
